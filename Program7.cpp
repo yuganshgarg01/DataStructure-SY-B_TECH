@@ -1,22 +1,22 @@
 #include <stdio.h>
 
-#define SIZE 10
+#define N 10
 
-int stack[SIZE];
+int Stack[N];
 int top = -1;
 
 // Push operation
 void push(int x)
 {
-    if (top == SIZE - 1)
+    if (top == N - 1)
     {
         printf("Stack Overflow\n");
     }
     else
     {
         top++;
-        stack[top] = x;
-        printf("%d pushed into stack\n", x);
+        Stack[top] = x;
+        printf("%d pushed into Stack\n", x);
     }
 }
 
@@ -29,12 +29,12 @@ void pop()
     }
     else
     {
-        printf("%d popped from stack\n", stack[top]);
+        printf("%d popped from Stack\n", Stack[top]);
         top--;
     }
 }
 
-// Display stack
+// Display Stack
 void display()
 {
     if (top == -1)
@@ -46,7 +46,7 @@ void display()
         printf("Stack elements:\n");
         for (int i = top; i >= 0; i--)
         {
-            printf("%d\n", stack[i]);
+            printf("%d\n", Stack[i]);
         }
     }
 }
@@ -85,4 +85,3 @@ int main()
         }
     }
 }
-
